@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import { increment } from '../vuex/actions'
-import { decrement } from '../vuex/actions'
 export default {
   methods: {
     increment () {

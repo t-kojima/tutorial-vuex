@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import { getCount } from '../vuex/getters'
-
 export default {
   computed: {
     count () {
