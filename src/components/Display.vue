@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Count is {{ counterValue }}</h3>
+    <h3>Count is {{ count }}</h3>
   </div>
 </template>
 
@@ -8,9 +8,9 @@
 import { getCount } from '../vuex/getters'
 
 export default {
-  vuex: {
-    getters: {
-      counterValue: getCount
+  computed: {
+    count () {
+      return this.$store.state.count
     }
   }
 }

@@ -3,17 +3,12 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const state = {
-  count: 0,
-}
-
-const mutations = {
-  INCREMENT(state, amount) {
-    state.count += amount
-  },
-}
-
 export default new Vuex.Store({
-  state,
-  mutations,
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment: state => ++state.count,
+    decrement: state => --state.count
+  }
 })

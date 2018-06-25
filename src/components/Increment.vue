@@ -1,15 +1,20 @@
 <template>
   <div>
     <button @click='increment'>Increment +1</button>
+    <button @click='decrement'>Decrement -1</button>
   </div>
 </template>
 
 <script>
-import { incrementCounter } from '../vuex/actions'
+import { increment } from '../vuex/actions'
+import { decrement } from '../vuex/actions'
 export default {
-  vuex: {
-    actions: {
-      increment: incrementCounter
+  methods: {
+    increment () {
+      this.$store.commit('increment')
+    },
+    decrement () {
+      this.$store.commit('decrement')
     }
   }
 }
