@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '../router'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,9 @@ const Form = {
       console.log('buttonAction')
       if (rootState.errorFlag) {
         commit('setStepCount', null, { root: true })
+      }
+      if (rootState.stepCount === 2) {
+        router.push('thanks')
       }
     }
   },
